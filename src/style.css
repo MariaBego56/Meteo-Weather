@@ -49,6 +49,7 @@ align-items: center;
 gap: 5px;
 font-size: 18px;
 font-weight: bold;
+padding: 5px;
 
   }
 
@@ -58,7 +59,7 @@ vertical-align: middle;
 
 }
 .weather-temperature-value{
-font-size: 60px;
+font-size: 50px;
 font-weight: 600;
 
 }
