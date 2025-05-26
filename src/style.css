@@ -53,16 +53,18 @@ font-weight: bold;
   }
 
 .weather-icon{
-font-size: 20px;
+font-size: 48px;
+vertical-align: middle;
 
 }
 .weather-temperature-value{
-font-size: 20px;
+font-size: 50px;
 
 }
 
 .weather-temperature-units{
-font-size: 15px;
+font-size: 32px;
+vertical-align: super;
 
 }
   footer{
