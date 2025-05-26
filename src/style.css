@@ -1,14 +1,8 @@
 body{
 
   background-color: #f9f7fe;
-  .open-sans-uniquifier {
-      font-family: "Open Sans", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: weight;
-      font-style: normal;
-      font-variation-settings:
-        "wdth" 100;
-    }
+  font-family: "Roboto", sans-serif;
+          
   }
 .weather-container{
   background: white;
@@ -20,7 +14,7 @@ body{
   }
 
 .search-input{
-  background-color: #f9f7fe;
+    background-color: #f9f7fe;
     border: none;
     color: rgba(39, 33, 66, 0.4);
     font-size: 16px;
@@ -37,5 +31,9 @@ body{
     padding: 20px;
     line-height: 1;
     border-radius: 7px;
+  }
+
+  footer{
+    padding: 30px;
   }
     
