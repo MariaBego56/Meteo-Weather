@@ -32,10 +32,25 @@ body{
     line-height: 1;
     border-radius: 7px;
   }
-.weather-now{
-display:flexbox;
-text-align: 0 auto;
-}
+  .weather-flex{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-top: 30px;
+gap: 20px;
+  }
+  .current-weather{
+    flex:1;
+
+  }
+  .weather-now{
+display: flex;
+align-items: center;
+gap: 5px;
+font-size: 18px;
+font-weight: bold;
+
+  }
 
   footer{
     padding-top: 60px;
