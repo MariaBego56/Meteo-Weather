@@ -52,6 +52,19 @@ font-weight: bold;
 
   }
 
+.weather-icon{
+font-size: 20px;
+
+}
+.weather-temperature-value{
+font-size: 20px;
+
+}
+
+.weather-temperature-units{
+font-size: 15px;
+
+}
   footer{
     padding-top: 60px;
     text-align:center;
