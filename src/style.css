@@ -15,7 +15,7 @@ body{
     max-width: 600px;
     margin: 60px auto;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 16px;
     box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   }
 
@@ -37,6 +37,6 @@ body{
     border: none;
     padding: 20px;
     line-height: 1;
-    border-radius: 5px;
+    border-radius: 16px;
   }
     
