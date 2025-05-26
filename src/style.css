@@ -4,6 +4,11 @@ body{
   font-family: "Roboto", sans-serif;
           
   }
+  h1{
+
+    font-size: larger;
+    font-weight: 600;
+  }
 .weather-container{
   background: white;
     max-width: 600px;
@@ -36,7 +41,7 @@ body{
 display: flex;
 justify-content: space-between;
 align-items: center;
-margin-top: 30px;
+margin-top: 40px;
 gap: 20px;
   }
   .current-weather{
@@ -54,18 +59,18 @@ padding: 5px;
   }
 
 .weather-icon{
-font-size: 25px;
+font-size: 20px;
 vertical-align: middle;
 
 }
 .weather-temperature-value{
-font-size: 40px;
+font-size: 55px;
 font-weight: 600;
 
 }
 
 .weather-temperature-units{
-font-size: 28px;
+font-size: 30px;
 vertical-align:top;
 
 }
