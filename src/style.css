@@ -65,7 +65,7 @@ font-weight: 600;
 
 .weather-temperature-units{
 font-size: 28px;
-vertical-align: super;
+vertical-align:text-top;
 
 }
   footer{
