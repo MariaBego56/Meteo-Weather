@@ -82,17 +82,19 @@ font-size: 30px;
 vertical-align:top;
 
 }
+.weather-conditions{
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 400;
+    color: grey;
+  }
+
 
 .humidity{
-  color: rgba(180, 50, 50, 0.4);
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
-  font-weight: 400;
+  color: red;
 }
-
 .wind-speed{
   color: rgba(180, 50, 50, 0.4);
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
-  font-weight: 400;
+}
 
   footer{
     padding-top: 60px;
