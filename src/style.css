@@ -83,17 +83,16 @@ vertical-align:top;
 
 }
 .weather-conditions{
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
-    font-weight: 400;
-    color: grey;
-  }
-
+  text-shadow: 1px 1px 4px rgba(26, 20, 20, 0.1);
+  font-weight: 400;
+  color: rgb(16, 15, 15, 0.6);
+  font-size: 16px; }
 
 .humidity{
   color: red;
 }
 .wind-speed{
-  color: rgba(180, 50, 50, 0.4);
+  color: red;
 }
 
   footer{
