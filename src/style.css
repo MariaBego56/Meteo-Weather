@@ -82,6 +82,17 @@ font-size: 30px;
 vertical-align:top;
 
 }
+
+.humidity{
+color: red;
+font-weight: 500;
+}
+
+.wind-speed{
+color: red;
+font-weight: 500;
+}
+
   footer{
     padding-top: 60px;
     text-align:center;
