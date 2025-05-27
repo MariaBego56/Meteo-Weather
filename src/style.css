@@ -84,14 +84,15 @@ vertical-align:top;
 }
 
 .humidity{
-color: red;
-font-weight: 500;
+  color: rgba(180, 50, 50, 0.4);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 400;
 }
 
 .wind-speed{
-color: red;
-font-weight: 500;
-}
+  color: rgba(180, 50, 50, 0.4);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 400;
 
   footer{
     padding-top: 60px;
