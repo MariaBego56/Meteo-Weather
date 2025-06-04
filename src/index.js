@@ -1,6 +1,6 @@
 let city="Sydney";
-
-let apiUrl=`https://api.shecodes.io/weather/v1/current?query=${"city"}&key=${"79c10854b8bbfdaa4tfa826305864ob5"}&units=metric`;
+let apiKey="79c10854b8bbfdaa4tfa826305864ob5";
+let apiUrl=`https://api.shecodes.io/weather/v1/current?query=${"city"}&key=${"apiKey"}&units=metric`;
 
 
 function displayTemperature(response){
