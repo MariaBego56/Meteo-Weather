@@ -65,19 +65,19 @@ body{
 
   }
 
-.weather-icon{
+#weather-icon{
   font-size: 30px;
   vertical-align: middle;
 
 }
-.weather-temperature-value{
+#weather-temperature-value{
   font-size: 65px;
   font-weight: 600;
   line-height: 50px;
 
 }
 
-.weather-temperature-units{
+#weather-temperature-units{
   font-size: 20px;
   vertical-align:super;
 
@@ -88,10 +88,10 @@ body{
   color: rgb(16, 15, 15, 0.6);
   font-size: 16px; }
 
-.humidity{
+#humidity{
   color: red;
 }
-.wind-speed{
+#wind-speed{
   color: red;
 }
 
