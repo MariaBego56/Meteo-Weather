@@ -34,7 +34,7 @@ body{
     width: 80%;
     border-radius: 7px;
   }
-  .search-button{
+  #search-button{
     margin-left: 8px;
     font-size: 16px;
     background-color: #885df1;
@@ -51,6 +51,7 @@ body{
   margin-top: 40px;
   gap: 20px;
   }
+    
   .current-weather{
     flex:1;
 
