@@ -6,7 +6,10 @@ let apiUrl=`https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apik
 function displayTemperature(response){
 
   let temperatureElement = document.querySelector("#weather-temperature-value");
-  temperatureElement.innerHTML = response.data.temperature.current;
+  let temperature = Math.round(response.data.temperature.current);
+  temperatureElement.innerHTML = temperature;
+  console.log (response);
+  
 }
 
 axios.get(apiUrl).then(displayTemperature);
