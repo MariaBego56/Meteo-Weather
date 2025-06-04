@@ -26,7 +26,7 @@
     <header>
       <form>
         <input type="search" placeholder="enter a city" required class="search-input" />
-        <input type="submit" value="search" class="search-button" />
+        <input type="submit" value="search" id="search-button" />
       </form>
     </header>
     <hr>
@@ -35,14 +35,14 @@
         <h1>London</h1>
         <p class="weather-conditions">
           Sunday 20:10, moderate rain <br>
-          Humidity: <span class="humidity"> 87%,</span> Wind: <span class="wind-speed">7.2km/h</span>
+          Humidity: <span id="humidity"> 87%,</span> Wind: <span id="wind-speed">7.2km/h</span>
         </p>
       </div>
 
       <div class="weather-now">
-        <span class="weather-icon">☀️ </span>
-        <span class="weather-temperature-value">24 </span>
-        <span class="weather-temperature-units">°C </span>
+        <span id="weather-icon">☀️ </span>
+        <span id="weather-temperature-value">24 </span>
+        <span id="weather-temperature-units">°C </span>
 
       </div>
 
@@ -56,6 +56,7 @@
       hosted <a href="https://meteo-wheather.netlify.app/" target="_blank" rel="noopener"> by Netlify</a>
     </footer>
   </div>
+  <script src="index.js"></script>
 </body>
 
 
