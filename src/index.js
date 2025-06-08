@@ -23,4 +23,11 @@ function displayTemperature(response){
 }
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
-console.log(document.querySelector("#search-form"));
+
+
+function displayCity(response){
+
+let cityElement = document.querySelector(".current-weather")
+let city = cityElement.value;
+cityElement.innerHTML = city;
+}
