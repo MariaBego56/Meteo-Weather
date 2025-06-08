@@ -56,6 +56,7 @@ function getLocalTimeFromGeoNames(lat, lng, callback) {
 
 
 function displayTemperature(response) {
+  console.log("Full response:", response);
   let temperature = Math.round(response.data.temperature.current);
   let city = response.data.city;
   let iconUrl = response.data.condition.icon_url.replace("http://", "https://");
@@ -92,9 +93,6 @@ function displayTemperature(response) {
     `;
   });
 }
-
-
-
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
