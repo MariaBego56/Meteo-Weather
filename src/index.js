@@ -1,5 +1,6 @@
 
 let apiKey = `79c10854b8bbfdaa4tfa826305864ob5`;
+let geoNamesUsername = "mariabdelaserna";
 
 
 function search(event) {
@@ -14,6 +15,25 @@ function search(event) {
  
   axios.get(apiUrl).then(displayTemperature);
 }
+
+function getLocalTimeFromGeoNames(lat, lng, callback) {
+  let geoUrl = `https://secure.geonames.org/timezoneJSON?lat=${lat}&lng=${lng}&username=${geoNamesUsername}`;
+
+  axios.get(geoUrl)
+    .then(function(response) {
+      if (response.data && response.data.time) {
+        callback(response.data.time); // returns local time as "2025-06-08 07:41"
+      } else {
+        console.error("GeoNames API Error:", response.data);
+        callback(null);
+      }
+    })
+    .catch(function(error) {
+      console.error("GeoNames API request failed:", error);
+      callback(null);
+    });
+}
+
 
 function formatDate(timestamp, timezoneOffset) {
   let localTimestamp = ((timestamp + timezoneOffset) * 1000); 
