@@ -30,4 +30,6 @@ function displayCity(response){
 let cityElement = document.querySelector(".current-weather")
 let city = cityElement.value;
 cityElement.innerHTML = city;
+axios.get(apiUrl).then(displayCity);
+
 }
