@@ -59,3 +59,4 @@ function formatDate(timestamp, timezoneOffset) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
+console.log("Raw API response:", response);
