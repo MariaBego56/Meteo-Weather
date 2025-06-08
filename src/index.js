@@ -54,28 +54,38 @@ function formatDate(timestamp, timezoneOffset) {
   return `${day} ${hours}:${minutes}`;
 }
 
-  function displayTemperature(response) {
-    let temperatureElement = document.querySelector("#weather-temperature-value");
-    let temperature = Math.round(response.data.temperature.current);
-    temperatureElement.innerHTML = temperature;
-  
-    let cityElement = document.querySelector("#city-name");
-    cityElement.innerHTML = response.data.city;
+function displayTemperature(response) {
+  let temperatureElement = document.querySelector("#weather-temperature-value");
+  let temperature = Math.round(response.data.temperature.current);
+  temperatureElement.innerHTML = temperature;
 
-
-  let formattedTime = formatDate(response.data.time, response.data.timezone);
-
-  document.querySelector(".weather-conditions").innerHTML = `
-    ${formattedTime}, ${response.data.condition.description} <br>
-    Humidity: <span id="humidity">${response.data.temperature.humidity}%,</span>
-    Wind: <span id="wind-speed">${response.data.wind.speed}km/h</span>
-  `;
+  let cityElement = document.querySelector("#city-name");
+  cityElement.innerHTML = response.data.city;
 
   let iconElement = document.querySelector("#weather-icon");
   iconElement.setAttribute("src", response.data.condition.icon_url);
   iconElement.setAttribute("alt", response.data.condition.description);
 
+  let lat = response.data.coordinates.latitude;
+  let lng = response.data.coordinates.longitude;
+
+  getLocalTimeFromGeoNames(lat, lng, function(localTimeString) {
+    let timeString;
+
+    if (localTimeString) {
+  timeString = formatGeoTime(localTimeString);
+} else {
+  timeString = "Time unavailable";
 }
+
+    document.querySelector(".weather-conditions").innerHTML = `
+      ${timeString}, ${response.data.condition.description} <br>
+      Humidity: <span id="humidity">${response.data.temperature.humidity}%,</span>
+      Wind: <span id="wind-speed">${response.data.wind.speed}km/h</span>
+    `;
+  });
+}
+
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
