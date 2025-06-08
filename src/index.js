@@ -33,11 +33,15 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayTemperature(response) {
-  let temperature = Math.round(response.data.temperature.current);
-  document.querySelector("#weather-temperature-value").innerHTML = temperature;
 
-  document.querySelector("#city-name").innerHTML = response.data.city;
+  function displayTemperature(response) {
+    let temperatureElement = document.querySelector("#weather-temperature-value");
+    let temperature = Math.round(response.data.temperature.current);
+    temperatureElement.innerHTML = temperature;
+  
+    let cityElement = document.querySelector("#city-name");
+    cityElement.innerHTML = response.data.city;
+
 
   let formattedTime = formatDate(response.data.time);
 
@@ -47,11 +51,11 @@ function displayTemperature(response) {
     Wind: <span id="wind-speed">${response.data.wind.speed}km/h</span>
   `;
 
-  document.querySelector(".weather-now").innerHTML = `  <span id="weather-icon">$(response.data.)`
+ (document.querySelector("#weather-icon")).innerHTML = response.data.condition.icon_url;
+
+
 }
 
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
-
-console.log(".weather-now");
