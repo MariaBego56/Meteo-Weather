@@ -16,24 +16,6 @@ function search(event) {
   axios.get(apiUrl).then(displayTemperature);
 }
 
-function getLocalTimeFromGeoNames(lat, lng, callback) {
-  let geoUrl = `https://secure.geonames.org/timezoneJSON?lat=${lat}&lng=${lng}&username=${geoNamesUsername}`;
-
-  axios.get(geoUrl)
-    .then(function(response) {
-      if (response.data && response.data.time) {
-        callback(response.data.time); // returns local time as "2025-06-08 07:41"
-      } else {
-        console.error("GeoNames API Error:", response.data);
-        callback(null);
-      }
-    })
-    .catch(function(error) {
-      console.error("GeoNames API request failed:", error);
-      callback(null);
-    });
-}
-
 
 function formatDate(timestamp, timezoneOffset) {
   let localTimestamp = ((timestamp + timezoneOffset) * 1000); 
@@ -53,6 +35,25 @@ function formatDate(timestamp, timezoneOffset) {
 
   return `${day} ${hours}:${minutes}`;
 }
+
+function getLocalTimeFromGeoNames(lat, lng, callback) {
+  let geoUrl = `https://secure.geonames.org/timezoneJSON?lat=${lat}&lng=${lng}&username=${geoNamesUsername}`;
+
+  axios.get(geoUrl)
+    .then(function(response) {
+      if (response.data && response.data.time) {
+        callback(response.data.time);
+      } else {
+        console.error("GeoNames API Error:", response.data);
+        callback(null);
+      }
+    })
+    .catch(function(error) {
+      console.error("GeoNames API request failed:", error);
+      callback(null);
+    });
+}
+
 
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#weather-temperature-value");
@@ -85,6 +86,8 @@ function displayTemperature(response) {
     `;
   });
 }
+
+
 
 
 let form = document.querySelector("#search-form");
