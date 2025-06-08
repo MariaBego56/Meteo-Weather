@@ -15,12 +15,13 @@ function search(event) {
   axios.get(apiUrl).then(displayTemperature);
 }
 
-function formatDate(timestamp) {
-  let date = new Date(timestamp * 1000); 
+function formatDate(timestamp, timezoneOffset) {
+  let localTimestamp = (timestamp + timezoneOffset) * 1000; 
+  let date = new Date(localTimestamp);
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  let day = days[date.getDay()];
-  let hours = date.getHours();
-  let minutes = date.getMinutes();
+  let day = days[date.getUTCDay()];
+  let hours = date.getUTCHours();
+  let minutes = date.getUTCMinutes();
 
 
   if (hours < 10) {
@@ -33,7 +34,6 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-
   function displayTemperature(response) {
     let temperatureElement = document.querySelector("#weather-temperature-value");
     let temperature = Math.round(response.data.temperature.current);
@@ -43,7 +43,7 @@ function formatDate(timestamp) {
     cityElement.innerHTML = response.data.city;
 
 
-  let formattedTime = formatDate(response.data.time);
+  let formattedTime = formatDate(response.data.time, response.data.timezone);
 
   document.querySelector(".weather-conditions").innerHTML = `
     ${formattedTime}, ${response.data.condition.description} <br>
@@ -54,7 +54,6 @@ function formatDate(timestamp) {
   let iconElement = document.querySelector("#weather-icon");
   iconElement.setAttribute("src", response.data.condition.icon_url);
   iconElement.setAttribute("alt", response.data.condition.description);
-
 
 }
 
