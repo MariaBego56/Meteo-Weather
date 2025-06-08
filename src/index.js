@@ -57,20 +57,23 @@ function getLocalTimeFromGeoNames(lat, lng, callback) {
 
 function displayTemperature(response) {
   console.log("Full response:", response);
-  let temperature = Math.round(response.data.temperature.current);
-  let city = response.data.city;
-  let iconUrl = response.data.condition.icon_url.replace("http://", "https://");
-  let description = response.data.condition.description;
-  let humidity = response.data.temperature.conditions.humidity;
-  let windSpeed = response.data.conditions.wind.speed;
+ 
 
+ 
+  let description = response.data.condition.description;
+  let humidity = response.data.temperature.humidity;
+  let windSpeed = response.data.wind.speed;
+
+  let temperature = Math.round(response.data.temperature.current);
   let temperatureElement = document.querySelector("#weather-temperature-value");
   temperatureElement.innerHTML = temperature;
 
   let cityElement = document.querySelector("#city-name");
+  let city = response.data.city;
   cityElement.innerHTML = city;
 
   let iconElement = document.querySelector("#weather-icon");
+  let iconUrl = response.data.condition.icon_url.replace("http://", "https://");
   iconElement.setAttribute("src", iconUrl);
   iconElement.setAttribute("alt", description);
 
