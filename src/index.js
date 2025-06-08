@@ -59,5 +59,3 @@ function formatDate(timestamp, timezoneOffset) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
-console.log("API time:", response.data.time);
-console.log("API timezone offset (sec):", response.data.timezone);
