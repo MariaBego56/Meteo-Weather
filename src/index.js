@@ -46,8 +46,12 @@ function displayTemperature(response) {
     Humidity: <span id="humidity">${response.data.temperature.humidity}%,</span>
     Wind: <span id="wind-speed">${response.data.wind.speed}km/h</span>
   `;
+
+  document.querySelector(".weather-now").innerHTML = `  <span id="weather-icon">$(response.data.)`
 }
+
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
+console.log(".weather-now");
