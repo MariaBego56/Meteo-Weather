@@ -51,11 +51,12 @@ function formatDate(timestamp) {
     Wind: <span id="wind-speed">${response.data.wind.speed}km/h</span>
   `;
 
- (document.querySelector("#weather-icon")).innerHTML = response.data.condition.icon_url;
+  let iconElement = document.querySelector("#weather-icon");
+  iconElement.setAttribute("src", response.data.condition.icon_url);
+  iconElement.setAttribute("alt", response.data.condition.description);
 
 
 }
-
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
