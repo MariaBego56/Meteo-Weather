@@ -16,7 +16,7 @@ function search(event) {
 }
 
 function formatDate(timestamp, timezoneOffset) {
-  let localTimestamp = (timestamp + timezoneOffset) * 1000; 
+  let localTimestamp = ((timestamp + timezoneOffset) * 1000); 
   let date = new Date(localTimestamp);
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   let day = days[date.getUTCDay()];
