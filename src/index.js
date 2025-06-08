@@ -22,10 +22,12 @@ function displayTemperature(response){
   let temperature = Math.round(response.data.temperature.current);
   temperatureElement.innerHTML = temperature;
   
-  let cityElement = document.querySelector(".current-weather");
+  let cityElement = document.querySelector("#city-name");
   cityElement.innerHTML = response.data.city; 
  
 }
+
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
