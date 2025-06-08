@@ -5,7 +5,10 @@ let apiKey = `79c10854b8bbfdaa4tfa826305864ob5`;
 function search(event) {
   event.preventDefault();
   let searchInputElement = document.querySelector(".search-input");
-  let city = searchInputElement.value;
+  let city = searchInputElement.value.trim().toLowerCase();
+
+  let cityElement = document.querySelector(".current-weather");
+  cityElement.innerHTML = response.data.city; 
 
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
@@ -24,12 +27,3 @@ function displayTemperature(response){
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
-
-function displayCity(response){
-
-let cityElement = document.querySelector(".current-weather")
-let city = cityElement.value;
-cityElement.innerHTML = city;
-axios.get(apiUrl).then(displayCity);
-
-}
