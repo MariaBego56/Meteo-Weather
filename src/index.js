@@ -56,10 +56,7 @@ function getLocalTimeFromGeoNames(lat, lng, callback) {
 
 
 function displayTemperature(response) {
-  console.log("Full response:", response);
- 
 
- 
   let description = response.data.condition.description;
   let humidity = response.data.temperature.humidity;
   let windSpeed = response.data.wind.speed;
