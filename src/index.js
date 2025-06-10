@@ -17,6 +17,24 @@ function search(event) {
 }
 
 
+function formatDate(timestamp, timezoneOffset) {
+  let localTimestamp = ((timestamp + timezoneOffset) * 1000); 
+  let date = new Date(localTimestamp);
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  let day = days[date.getUTCDay()];
+  let hours = date.getUTCHours();
+  let minutes = date.getUTCMinutes();
+
+
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${day} ${hours}:${minutes}`;
+}
 
 function getLocalTimeFromGeoNames(lat, lng, callback) {
   let geoUrl = `https://secure.geonames.org/timezoneJSON?lat=${lat}&lng=${lng}&username=${geoNamesUsername}`;
