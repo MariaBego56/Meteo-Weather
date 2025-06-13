@@ -95,7 +95,12 @@ body{
 #wind-speed{
   color: red;
 }
-
+.weather-forecast-date{
+  color: rgba(39, 33, 66, 0.4 )
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+}
   footer{
     padding-top: 60px;
     text-align:center;
