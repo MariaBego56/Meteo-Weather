@@ -44,10 +44,10 @@ body{
     line-height: 1;
     border-radius: 7px;
   }
-
+  
   .weather-flex {
     display: flex;
-   
+    flex-direction: column;
     gap: 20px;
   }
   
