@@ -44,14 +44,13 @@ body{
     line-height: 1;
     border-radius: 7px;
   }
-  .weather-flex{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 40px;
-  gap: 20px;
+
+  .weather-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
- 
+  
   .weather-top {
     display: flex;
     justify-content: space-between;
