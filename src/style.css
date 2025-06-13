@@ -104,6 +104,8 @@ body{
   display: flex;
   justify-content: space-around;
   margin-top: 10px;
+ 
+      background: pink; }
 }
 .weather-forecast-date{
   text-align: center;
