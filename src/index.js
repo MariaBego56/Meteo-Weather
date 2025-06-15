@@ -88,6 +88,7 @@ function displayTemperature(response) {
       Humidity: <span id="humidity">${response.data.temperature.humidity}%,</span>
       Wind: <span id="wind-speed">${response.data.wind.speed}km/h</span>
     `;
+    getForecast(response.data.city);
   });
 }
 function getForecast(city){
@@ -124,5 +125,5 @@ forecastHtml = forecastHtml +
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
-getForecast();
+
 displayForecast();
