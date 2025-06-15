@@ -98,8 +98,7 @@ axios.get(apiUrl).then(displayForecast);
 
 }
 
-function displayForecast (){
-
+function displayForecast (response){
 let forecastElement = document.querySelector("#forecast");
 let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 let forecastHtml ="";
