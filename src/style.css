@@ -109,7 +109,7 @@ body{
 }
 
 .weather-forecast-day {
-  
+  background-color: whitesmoke;
   border-radius: 10px;
   padding: 10px;
   text-align: center;
