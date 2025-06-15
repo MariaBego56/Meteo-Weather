@@ -133,9 +133,7 @@ body{
 .weather-forecast-units {
   text-align: center;
   margin-top: 30px;
-  color: red;
-  display: flex;
-  justify-content: center;
+  
 }
   footer {
     padding-top: 60px;
