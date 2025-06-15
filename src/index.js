@@ -96,11 +96,12 @@ let forecast = document.querySelector("#forecast");
 let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 let forecastHtml ="";
 
-forecastElement.innerHTML = forecastHtml;
+
 
 
 days.forEach(function(day) { 
-forecast.innerHTML =`<div class="weather=forecast-day">
+forecastHtml = forecastHtml + 
+`<div class="weather=forecast-day">
           <div class="weather-forecast-date">${day}</div>
           <div class="weather-forecast-icon">🌥️</div>
           <div class="weather-forecast-temperatures">
@@ -115,5 +116,5 @@ forecast.innerHTML =`<div class="weather=forecast-day">
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
-
+forecastElement.innerHTML = forecastHtml;
 displayForecast()
