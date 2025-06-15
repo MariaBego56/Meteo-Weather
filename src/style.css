@@ -119,11 +119,11 @@ border-radius: 10px;
   text-align: center;
     font-size: 48px;
     line-height: 20px;
-    margin-bottom;: 10px
+    margin-bottom: 10px
 }
 .weather-forecast-temperatures{
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
   color: red;
   display:flex;
   justify-content: center;
@@ -132,7 +132,7 @@ border-radius: 10px;
   padding: 0 10px;
 }
 
-  footer{
+  footer {
     padding-top: 60px;
     text-align:center;
     font-size: 14px;
