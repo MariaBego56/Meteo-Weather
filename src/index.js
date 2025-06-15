@@ -3,15 +3,18 @@ let apiKey = `79c10854b8bbfdaa4tfa826305864ob5`;
 let geoNamesUsername = "mariabdelaserna";
 
 
-function search(event) {
-  event.preventDefault();
-  let searchInputElement = document.querySelector(".search-input");
-  let city = searchInputElement.value.trim().toLowerCase();
-
-
+  function search(event) {
+    if (event) event.preventDefault();
+  
+    let searchInputElement = document.querySelector(".search-input");
+    let city = searchInputElement.value.trim().toLowerCase();
+  
+    if (!city) {
+      city = "london"; 
+    }
+  
 
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-
  
   axios.get(apiUrl).then(displayTemperature);
 }
