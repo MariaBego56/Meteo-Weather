@@ -92,16 +92,13 @@ function displayTemperature(response) {
 }
 function displayForecast (){
 
-let forecast = document.querySelector("#forecast");
+let forecastElement = document.querySelector("#forecast");
 let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 let forecastHtml ="";
 
-
-
-
 days.forEach(function(day) { 
 forecastHtml = forecastHtml + 
-`<div class="weather=forecast-day">
+`<div class="weather-forecast-day">
           <div class="weather-forecast-date">${day}</div>
           <div class="weather-forecast-icon">🌥️</div>
           <div class="weather-forecast-temperatures">
@@ -114,10 +111,10 @@ forecastHtml = forecastHtml +
       });
       
       forecastElement.innerHTML = forecastHtml;
-      displayForecast()
+      
     }
 
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
-
+displayForecast();
