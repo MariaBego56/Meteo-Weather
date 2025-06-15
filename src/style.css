@@ -81,7 +81,7 @@ body{
   font-size: 20px;
   position: relative;
   top: -20px;
-  left: 2px;
+    left: 2px;
 }
 
 #weather-temperature-units{
@@ -110,9 +110,9 @@ body{
 }
 .weather-forecast-date{
   padding: 10px;
-  border-radius: 10px;
-  flex: 1;
-  max-width: 80px;
+    border-radius: 10px;
+    flex: 1;
+    max-width: 80px;
   text-align: center;
   color: rgba(39, 33, 66, 0.4 );
   font-size: 16px;
