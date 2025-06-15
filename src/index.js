@@ -112,9 +112,12 @@ forecastHtml = forecastHtml +
         `;
 
       });
+      
+      forecastElement.innerHTML = forecastHtml;
+      displayForecast()
     }
+
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
-forecastElement.innerHTML = forecastHtml;
-displayForecast()
