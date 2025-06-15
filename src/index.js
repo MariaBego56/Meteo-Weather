@@ -92,7 +92,7 @@ function displayTemperature(response) {
   });
 }
 function getForecast(city){
-  let apiKey = ` 79c10854b8bbfdaa4tfa826305864ob5`;
+  let apiKey = "79c10854b8bbfdaa4tfa826305864ob5";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units = metric`;
 
 axios.get(apiUrl).then(displayForecast);
