@@ -90,13 +90,18 @@ function displayTemperature(response) {
     `;
   });
 }
-
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", search);
+function displayForecast (){
 
 let forecast = document.querySelector("#forecast");
+let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+let forecastHtml ="";
+
+forecastElement.innerHTML = forecastHtml;
+
+
+days.forEach(function(day) { 
 forecast.innerHTML =`<div class="weather=forecast-day">
-          <div class="weather-forecast-date">Tues</div>
+          <div class="weather-forecast-date">${day}</div>
           <div class="weather-forecast-icon">🌥️</div>
           <div class="weather-forecast-temperatures">
             <div class="weather-forecast-temperature"><strong>15°</strong></div>
@@ -104,3 +109,11 @@ forecast.innerHTML =`<div class="weather=forecast-day">
           </div>
         </div> 
         `;
+
+      });
+    }
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", search);
+
+
+displayForecast()
