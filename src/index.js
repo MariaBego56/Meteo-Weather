@@ -10,7 +10,7 @@ let geoNamesUsername = "mariabdelaserna";
     let city = searchInputElement.value.trim().toLowerCase();
   
     if (!city) {
-      city = "london"; 
+      city = "London"; 
     }
   
 
