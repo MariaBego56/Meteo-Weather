@@ -94,18 +94,22 @@ function displayTemperature(response) {
     getForecast(response.data.city);
   });
 }
+
 function getForecast(city){
-  let apiKey = "79c10854b8bbfdaa4tfa826305864ob5";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
-
-axios.get(apiUrl).then(displayForecast);
-
+  
+  axios.get(apiUrl).then(function(response){
+    console.log("Forecast API response:", response);
+    displayForecast(response);
+  });
 }
+
+
 function formatDay(timestamp){
-let date = new Date (timestamp * 1000);
-let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri","Sat" ]
+let dt = new Date (timestamp * 1000);
+let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri","Sat" ];
  
-return days[date.getDay()];
+return days[dt.getDay()];
 }
 function displayForecast (response){
 
