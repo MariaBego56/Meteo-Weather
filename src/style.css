@@ -73,7 +73,7 @@ body{
   .weather-now{ 
   display: flex;
   align-items: center;
- flex-direction: column;
+
 
   }
 
@@ -109,7 +109,7 @@ body{
 .weather-forecast {
   display: flex;
   flex-direction: row;
- gap:5px;
+ gap: 5px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 20px;
