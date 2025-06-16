@@ -68,6 +68,8 @@ body{
       .weather-container {
         padding: 30px 20px;
       }
+    }
+
   .weather-now{ 
   display: flex;
   align-items: center;
@@ -104,18 +106,29 @@ body{
 #wind-speed{
   color: red;
 }
-.weather-forecast{
+.weather-forecast {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin-top:30px;
-
- 
+  flex-direction: row;
+  gap: 10px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 20px;
+  max-width: 100%;
+}
+.weather-forecast::-webkit-scrollbar {
+  display: none;
 }
 
+.weather-forecast {
+  -ms-overflow-style: none;
+  
+  scrollbar-width: none;
+ 
+}
 .weather-forecast-day {
- width: 80%;
- margin-bottom: 20px;
+  flex: 0 0 auto;
+  width: 100px;
+ 
 }
 .weather-forecast-date{
   padding: 10px;
@@ -146,6 +159,4 @@ body{
     text-align:center;
     font-size: 14px;
     color: rgba(136, 93, 241, 0.8);
-     
   }
-    
