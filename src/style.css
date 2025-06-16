@@ -109,8 +109,7 @@ body{
 .weather-forecast {
   display: flex;
   flex-direction: row;
-  gap: 10px;
-
+ gap:5px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 20px;
