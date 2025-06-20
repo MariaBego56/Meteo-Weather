@@ -107,8 +107,8 @@ function getForecast(city){
 
 function formatDay(timestamp) {
   try {
-    let date = new Date(timestamp * 1000);
-    return date.toLocaleDateString(navigator.language, { weekday: "short" });
+    let dt = new Date(timestamp * 1000);
+    return dt.toLocaleDateString(navigator.language, { weekday: "short" });
   } catch (error) {
     let dt = new Date(timestamp * 1000);
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
