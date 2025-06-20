@@ -105,12 +105,17 @@ function getForecast(city){
 }
 
 
-function formatDay(timestamp){
-let dt = new Date (timestamp * 1000);
-let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri","Sat" ];
- 
-return days[dt.getDay()];
+function formatDay(timestamp) {
+  try {
+    let date = new Date(timestamp * 1000);
+    return date.toLocaleDateString(navigator.language, { weekday: "short" });
+  } catch (error) {
+    let dt = new Date(timestamp * 1000);
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    return days[dt.getDay()];
+  }
 }
+
 function displayForecast (response){
 
 let forecastHtml ="";
@@ -130,8 +135,6 @@ forecastHtml = forecastHtml +
       }
       });
      
-      
-      
       let forecastElement = document.querySelector("#forecast"); 
       forecastElement.innerHTML = forecastHtml;
     
