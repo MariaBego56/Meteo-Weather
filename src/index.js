@@ -104,14 +104,13 @@ function getForecast(city){
   });
 }
 
-function formatDay(timestamp) {
-  let dt = new Date(timestamp * 1000);
-  return dt.toLocaleDateString(navigator.language, { weekday: "short" });
-}
 
+function formatDay(timestamp){
+let dt = new Date (timestamp * 1000);
+let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri","Sat" ];
+ 
 return days[dt.getDay()];
 }
-
 function displayForecast (response){
 
 let forecastHtml ="";
